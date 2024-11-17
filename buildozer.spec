@@ -1,55 +1,27 @@
 [app]
-# (str) Title of your application
-title = Kivy Calculator
 
-# (str) Package name
-package.name = kivycalculator
-
-# (str) Package domain (e.g., org.kivy)
-package.domain = org.example
-
-# (str) Source code directory (where your main.py is located)
+title = Basic Kivy App
+package.name = basicapp
+package.domain = net.aesencryptornl
 source.dir = .
-
-# (str) Main Python file (e.g., main.py)
-source.main = main.py
-
-# (str) Version of your application
-version = 1.0
-
-# (list) Supported screen orientations
+source.include_exts = py,png,jpg,kv,atlas
+requirements = python3,kivy
+version = 0.1
 orientation = portrait
 
-# (list) Permissions needed by your app
-permissions = INTERNET
+[buildozer]
 
-# (list) List of external Python modules your app needs
-requirements = python3, kivy
+log_level = 2
+warn_on_root = 1
 
-# (bool) Enable fullscreen mode
-fullscreen = 1
+[buildozer.android]
 
-# (list) Supported platforms
-# Example: android, ios
-android.arch = armeabi-v7a
-
-# (str) Android NDK version
-android.ndk = 21b
-
-# (str) Android SDK version
-android.sdk = 31
-
-# (bool) Enable compiling .py files into .pyo (optimized) files
-android.compile_pyo = 1
-
-# (str) Android log level (default: INFO)
-android.log_level = INFO
-
-# (str) Minimum Android API level
+fullscreen = 0
+android.api = 30
 android.minapi = 21
-
-# (str) Target Android API level
-android.targetapi = 30
-
-# (str) Android build type (debug or release)
-android.build_type = debug
+android.ndk = 19b
+android.sdk = 24
+android.entrypoint = org.kivy.android.PythonActivity
+android.manifest.theme = @android:style/Theme.NoTitleBar
+android.update_sdk = True
+android.javac_target = 1.8
