@@ -5,7 +5,6 @@ package.name = basicapp
 package.domain = net.aesencryptornl
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
-icon.filename = icon1.png
 requirements = python3,kivy
 version = 0.1
 orientation = portrait
